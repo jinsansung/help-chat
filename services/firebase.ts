@@ -51,12 +51,12 @@ import { KnowledgeFile } from "../types";
 
 // 5단계: 아래에 당신의 Firebase 설정 키를 붙여넣으세요.
 const firebaseConfig = {
-  apiKey: "YOUR_API_KEY",
-  authDomain: "YOUR_PROJECT_ID.firebaseapp.com",
-  projectId: "YOUR_PROJECT_ID",
-  storageBucket: "YOUR_PROJECT_ID.appspot.com",
-  messagingSenderId: "YOUR_SENDER_ID",
-  appId: "YOUR_APP_ID"
+  apiKey: "AIzaSyD0yavRTchwhwA97F6lr_9BYkLoXMksLSw",
+  authDomain: "help-bot-55e76.firebaseapp.comm",
+  projectId: "help-bot-55e76",
+  storageBucket: help-bot-55e76.firebasestorage.app",
+  messagingSenderId: "360675539401",
+  appId: "1:360675539401:web:12fa60fc2e4e8ac7a0d018"
 };
 
 // ====================================================================================
