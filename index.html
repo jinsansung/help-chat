@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Chatbot Plugin</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              'primary': '#FFCD00',
+              'primary-dark': '#E5B800',
+            },
+            keyframes: {
+              'slide-in-up': {
+                  '0%': { transform: 'translateY(100%)', opacity: '0' },
+                  '100%': { transform: 'translateY(0)', opacity: '1' },
+              },
+              'slide-out-down': {
+                  '0%': { transform: 'translateY(0)', opacity: '1' },
+                  '100%': { transform: 'translateY(100%)', opacity: '0' },
+              },
+              'scale-in': {
+                '0%': { transform: 'scale(0)', opacity: '0' },
+                '100%': { transform: 'scale(1)', opacity: '1' },
+              },
+              'scale-out': {
+                '0%': { transform: 'scale(1)', opacity: '1' },
+                '100%': { transform: 'scale(0)', opacity: '0' },
+              }
+            },
+            animation: {
+              'slide-in-up': 'slide-in-up 0.3s ease-out forwards',
+              'slide-out-down': 'slide-out-down 0.3s ease-in forwards',
+              'scale-in': 'scale-in 0.2s ease-out forwards',
+              'scale-out': 'scale-out 0.2s ease-in forwards',
+            }
+          }
+        }
+      }
+    </script>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.24.0"
+  }
+}
+</script>
+</head>
+  <body>
+    <!--
+      [가이드] 이 챗봇을 당신의 웹사이트에 삽입하는 방법
+
+      이 프로젝트는 개발 편의를 위해 독립적인 웹페이지(SPA)로 설정되어 있습니다.
+      실제 운영 웹사이트에 챗봇을 적용하려면 아래의 과정을 따라주세요.
+
+      1. 프로젝트 빌드 (Build)
+         - 먼저 이 React 프로젝트를 하나의 JavaScript 파일로 만들어야 합니다.
+         - Vite, Webpack, Parcel 같은 '빌드 도구'를 사용하여 프로젝트를 빌드하세요.
+         - 예: `npm run build` 또는 `yarn build`
+         - 빌드가 완료되면 'dist' 또는 'build' 폴더에 `chatbot.js`, `chatbot.css` 같은 파일이 생성됩니다.
+
+      2. 웹사이트에 코드 삽입
+         - 당신의 웹사이트 HTML 파일에서 `</body>` 태그 바로 앞에 아래 코드를 추가하세요.
+
+         <!-- 1. 챗봇이 렌더링될 HTML 요소 -->
+         <div id="chatbot-root"></div>
+
+         <!-- 2. 빌드된 CSS 및 JS 파일 로드 (경로는 실제 파일 위치에 맞게 수정) -->
+         <link rel="stylesheet" href="/path/to/your/chatbot.css">
+         <script src="/path/to/your/chatbot.js"></script>
+
+      - 위 과정을 마치면 당신의 웹사이트 오른쪽 하단에 챗봇 아이콘이 나타납니다.
+    -->
+
+    <!-- 개발 환경용 Root Element -->
+    <div id="chatbot-root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>

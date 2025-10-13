@@ -1,0 +1,5 @@
+{
+  "name": "AI Chatbot Plugin",
+  "description": "An embeddable chatbot widget for websites, powered by Gemini. It answers user questions based on a knowledge base provided by an administrator through a password-protected panel. The knowledge base is a Markdown file stored in Firebase.",
+  "requestFramePermissions": []
+}
